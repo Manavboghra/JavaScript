@@ -54,3 +54,25 @@ function details(anylist){
     console.log(`The first element is ${anylist[0]}, with second element ${anylist[1]}`)
 }
 details(userInfo)
+
+
+function Person (fname,lastname){
+    this.name = fname,
+    this.lname = lastname
+}
+
+// Person()
+
+Person.prototype.gender = "Male"
+
+Person.prototype.fullname = function(){
+    return this.name+" "+this.lname;
+};
+
+const person1 = new Person("Aasu","Malik")
+const person2 = new Person("Rahul","Chaudhari")
+
+console.log(person1);
+console.log(person2);
+console.log(person2.gender);
+console.log(person2.fullname());
